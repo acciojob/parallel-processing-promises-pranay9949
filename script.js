@@ -7,8 +7,8 @@ const images = [
   { url: "https://picsum.photos/id/238/200/300" },
   { url: "https://picsum.photos/id/239/200/300" },
 ];
-
-function loadImage(url) {
+btn.addEventListener("click",()=>{
+	function loadImage(url) {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve(img);
@@ -30,3 +30,4 @@ Promise.all(imagePromises)
   .catch(error => {
     console.error("Error loading one or more images:", error);
   });
+})
